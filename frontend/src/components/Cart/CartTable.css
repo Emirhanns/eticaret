@@ -1,0 +1,131 @@
+/* Genel stil ayarları */
+.cart-table-wrapper {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shop-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .shop-table th,
+  .shop-table td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .shop-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .shop-table td {
+    border-bottom: 1px solid #f1f1f1;
+    color: #555;
+  }
+  
+  /* Ürün resimleri */
+  .product-thumbnail img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Ürün adı ve fiyatı */
+  .product-name {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1.1em;
+    color: #27ae60;
+  }
+  
+  /* Adet değişim butonları */
+  .product-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Ara Toplam */
+  .product-subtotal {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e67e22;
+  }
+  
+  /* Kaldır butonu */
+  .product-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .remove-btn:focus {
+    outline: none;
+  }
+  
+  .product-action button {
+    font-size: 1em;
+  }
+  
+  /* Yanıtları, hataları göstermek için (Mesajlar) */
+  .ant-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+  }
+  
+  @media (max-width: 768px) {
+    .shop-table th, .shop-table td {
+      padding: 8px;
+    }
+  
+    .product-thumbnail img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+  
+    .product-quantity {
+      gap: 5px;
+    }
+  }
+  

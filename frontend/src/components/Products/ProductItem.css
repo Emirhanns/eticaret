@@ -1,0 +1,153 @@
+.products {
+  display: grid; /* Grid düzeni */
+  display: flex;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+  gap: 20px; /* Ürünler arasındaki boşluk */
+  width: 100%; /* Kapsayıcı genişliği */
+  box-sizing: border-box;
+}
+
+.product-item {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+  height: 350px; /* Sabit yükseklik */
+  box-sizing: border-box;
+  
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  position: relative;
+  width: 100% ;
+  height: auto; /* Görsel alanının yüksekliği */
+  cursor: pointer;
+  border-radius: 8px; /* Köşe yuvarlama */
+  overflow: hidden;
+}
+
+
+.product-image img {
+  width: 75%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.img1 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product-image:hover .img1 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.product-image:hover .img2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-info {
+  margin-top: 10px;
+  flex-grow: 1; /* Ürün bilgisini alt kısma iter */
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  
+}
+
+.product-prices {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Fiyatlar arasındaki boşluk */
+}
+
+.new-price {
+  font-size: 18px;
+  color: #ff3c20;
+  font-weight: bold;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #7d7d7d;
+  text-decoration: line-through;
+}
+
+.product-discount {
+  display: inline-block;
+  background-color: #ff3c20;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.product-action {
+  margin-top: 15px;
+}
+
+.add-to-cart-btn {
+  background-color: #ff3c20;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e0361b;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Düzen */
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr); /* Tablet için 3 ürün/satır */
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* Mobil için 2 ürün/satır */
+  }
+}
+
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: 1fr; /* Küçük ekranlarda 1 ürün/satır */
+  }
+}

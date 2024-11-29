@@ -1,0 +1,105 @@
+.cart-page {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  max-width: 100vw; /* Genişliğin sayfayı taşmaması için */
+  box-sizing: border-box;
+}
+
+.cart-content {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cart-summary,
+.payment-form {
+  flex: 1 1 45%; /* Her biri %45 genişlik alacak, aralarındaki boşluklarla birlikte */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Box modelinin düzgün çalışması için */
+}
+
+.cart-summary {
+  background-color: #f9f9f9;
+}
+
+.payment-form {
+  background-color: #fdfdfd;
+}
+
+.payment-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.plus,
+.minus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #d9d9d9;
+  margin-left: 10px;
+}
+
+.plus:hover,
+.minus:hover {
+  background-color: #e6f7ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plus:active,
+.minus:active {
+  background-color: #bae7ff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-button {
+  background-color: rgb(133, 133, 133);
+}
+
+@media (max-width: 768px) {
+  .cart-summary,
+  .payment-form {
+    flex: 1 1 100%; /* Küçük ekranlarda her bir bölümü tam genişlik alacak şekilde ayarla */
+    margin-bottom: 20px;
+  }
+
+  .cart-content {
+    gap: 15px; /* Daha küçük aralıklar kullan */
+  }
+
+  .cart-page {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-summary,
+  .payment-form {
+    padding: 15px; /* Küçük ekranlarda padding'i azalt */
+  }
+
+  .cart-content {
+    gap: 10px; /* Daha küçük boşluklar */
+  }
+}
+
+@media (max-width: 768px) {
+  .ant-table-thead > tr > th:nth-child(1) {
+    display: none; /* "Ürün" başlığını gizler */
+  }
+}
