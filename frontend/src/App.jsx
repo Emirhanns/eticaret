@@ -24,6 +24,7 @@ import PaymentPage from "./components/Cart/PaymentPage";
 
 function App() {
   return (
+  <Router basename="/">
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/shop" element={<ShopPage />} />
@@ -50,7 +51,8 @@ function App() {
         <Route path="orders" element={<OrderPage />} />
       </Route>
     </Routes>
-    
+  </Router >
+
   );
 }
 
