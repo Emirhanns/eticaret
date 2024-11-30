@@ -35,7 +35,7 @@ function App() {
       <Route path="/payment" element={<PaymentPage />} />
       
       {/* Admin Routes */}
-      <Route path="/admin/*" element={<DashboardPage />}> /
+    <Route path="/admin/*"> /
         <Route index element={<DashboardPage />} />
         <Route path="users" element={<UserPage />} />
         <Route path="categories" element={<CategoryPage />} />
