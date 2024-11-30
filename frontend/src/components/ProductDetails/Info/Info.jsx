@@ -22,17 +22,24 @@ const Info = ({ singleProduct }) => {
       <h1 className="product-title">{singleProduct.name}</h1>
      
       <div className="product-price">
-        <s className="old-price">${originalPrice.toFixed(2)}</s>
-        <strong className="new-price">${discountedPrice.toFixed(2)}</strong>
+        {/* Fiyatlar eşitse yalnızca orijinal fiyatı göster */}
+        {discountedPrice !== originalPrice ? (
+          <>
+            <s className="old-price">{originalPrice.toFixed(2)} TL</s>
+            <strong className="new-price">{discountedPrice.toFixed(2)} TL</strong>
+          </>
+        ) : (
+          <strong className="new-price">{originalPrice.toFixed(2)} TL</strong>
+        )}
       </div>
+
       <div
         className="product-description"
         dangerouslySetInnerHTML={{ __html: singleProduct.description }}
       ></div>
+
       <form className="variations-form">
         <div className="variations">
-        
-          
           <div className="cart-button">
             <span>Adet:</span>
             <input
@@ -59,10 +66,8 @@ const Info = ({ singleProduct }) => {
               Sepete Ekle
             </button>
           </div>
-          
         </div>
       </form>
-      
     </div>
   );
 };
