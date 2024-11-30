@@ -44,25 +44,7 @@
   transition: opacity 0.3s ease;
 }
 
-.img1 {
-  opacity: 1;
-  visibility: visible;
-}
 
-.img2 {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.product-image:hover .img1 {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.product-image:hover .img2 {
-  opacity: 1;
-  visibility: visible;
-}
 
 .product-info {
   margin-top: 10px;
