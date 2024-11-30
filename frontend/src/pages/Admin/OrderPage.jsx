@@ -4,12 +4,13 @@ import { Spin, Table, message } from "antd";
 const OrderPage = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/orders");
-        if (response.ok) {
+        const response = await fetch(`${apiUrl}/api/orders`);
+          if (response.ok) {
           const data = await response.json();
           setOrders(data);
         } else {
