@@ -3,6 +3,9 @@ import { CartContext } from "../context/CartProvider";
 import { Spin, message, Select, Input, Table, Button, Modal } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import "./CartPage.css"; // CSS dosyasını düzenlemeyi unutmayın
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+
 
 const { Option } = Select;
 
@@ -68,13 +71,14 @@ const CartPage = () => {
         orderNumber, // Sipariş numarası ekleniyor
       };
 
-      const response = await fetch("http://localhost:5000/api/orders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
+      const response = await fetch(`${API_BASE_URL}/api/orders`, { // Buradaki çift tırnak işareti düzeltilmeli
+      method: "POST",
+      headers: {
+      "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
       });
+
 
       const data = await response.json();
       if (response.ok) {
