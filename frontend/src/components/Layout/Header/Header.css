@@ -310,7 +310,7 @@ header .menu-dropdown-content a:hover {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: rgb(19, 17, 17);
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
   max-height: 200px;
