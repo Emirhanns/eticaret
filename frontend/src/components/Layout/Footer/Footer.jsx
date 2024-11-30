@@ -8,9 +8,7 @@ const Footer = () => {
         <div className="hero-section">
           <div className="hero-overlay">
             <h1>Lezzetli Anlar, Tatlı Fırsatlar!</h1>
-            <b>
-              Lezzetli Anlar, Tatlı Fırsatlar!" sloganımız, tatlı ve kurabiye keyfini her anınıza taşımayı amaçlıyor. Her lokmada, size özel bir lezzet deneyimi sunuyoruz. İster çay saatlerinizde, ister sevdiklerinizle paylaşacağınız bir tatlı molasında, en taze ve en lezzetli ürünleri kapınıza getiriyoruz. Sitemizdeki tatlı fırsatlarla, sevdiklerinize tatlı sürprizler yaparken, bütçenizi de düşünüyoruz. Her alışverişinizde, sadece damağınızı değil, ruhunuzu da tatlandırmak için buradayız!
-            </b>
+            
             <img src="https://i.imgur.com/07DOBp9.jpg" />
           </div>
         </div>
@@ -26,13 +24,7 @@ const Footer = () => {
               Ekmeğimiz günlük olarak taze olarak pişirilmekte olup hiçbir koruyucu madde içermemektedir ve kalitesi oldukça yüksektir. Aynı zamanda özellikle güzel ve yumuşaktır.
               </p>
             </div>
-            <div className="feature-item">
-              <img src="https://i.imgur.com/YTGJ4j9.png" />
-              <h3>Uygun Fiyat</h3>
-              <p>
-              Piyasadaki en ideal fiyatlarla, lezzetten ödün vermeden büyük değer sunabiliyoruz.
-              </p>
-            </div>
+            
             <div className="feature-item">
               <img src="https://i.imgur.com/seU6x4Y.png" />
               <h3>Kapınıza Teslim</h3>
@@ -40,13 +32,7 @@ const Footer = () => {
                 Güvenilir kargo ile evinize kadar ulaştırıyoruz
               </p>
             </div>
-            <div className="feature-item">
-              <img src="https://i.imgur.com/yDSzNPD.png" />
-              <h3>Hijyenik Çalışma</h3>
-              <p>
-              Güvenle tüketebileceğiniz, temiz ve sağlıklı tatlar için her zaman yanınızdayız.
-              </p>
-            </div>
+           
             <div className="feature-item">
               <img src="https://i.imgur.com/1TUxJ2t.png" />
               <h3>Lezzetli Tatlar</h3>
