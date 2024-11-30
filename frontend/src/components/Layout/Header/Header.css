@@ -233,6 +233,10 @@ header .menu-dropdown-content a:hover {
     transition: 0.5s ease all;
   }
 
+   .dropdown-item-image {
+    display: none;
+  }
+
   .header-center .bi-x-circle {
     display: inline-block;
     position: absolute;
