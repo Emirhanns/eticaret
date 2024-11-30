@@ -35,19 +35,22 @@ function App() {
       <Route path="/payment" element={<PaymentPage />} />
       
       {/* Admin Routes */}
-      <Route path="/admin" element={<DashboardPage />} />
-      <Route path="/admin/users" element={<UserPage />} />
-      <Route path="/admin/categories" element={<CategoryPage />} />
-      <Route path="/admin/categories/create" element={<CreateCategoryPage />} />
-      <Route path="/admin/categories/update/:id" element={<UpdateCategoryPage />} />
-      <Route path="/admin/products" element={<ProductPage />} />
-      <Route path="/admin/products/create" element={<CreateProductPage />} />
-      <Route path="/admin/products/update/:id" element={<UpdateProductPage />} />
-      <Route path="/admin/coupons" element={<CouponPage />} />
-      <Route path="/admin/coupons/create" element={<CreateCouponPage />} />
-      <Route path="/admin/coupons/update/:id" element={<UpdateCouponPage />} />
-      <Route path="/admin/orders" element={<OrderPage />} />
+      <Route path="/admin/*" element={<DashboardPage />}> /
+        <Route index element={<DashboardPage />} />
+        <Route path="users" element={<UserPage />} />
+        <Route path="categories" element={<CategoryPage />} />
+        <Route path="categories/create" element={<CreateCategoryPage />} />
+        <Route path="categories/update/:id" element={<UpdateCategoryPage />} />
+        <Route path="products" element={<ProductPage />} />
+        <Route path="products/create" element={<CreateProductPage />} />
+        <Route path="products/update/:id" element={<UpdateProductPage />} />
+        <Route path="coupons" element={<CouponPage />} />
+        <Route path="coupons/create" element={<CreateCouponPage />} />
+        <Route path="coupons/update/:id" element={<UpdateCouponPage />} />
+        <Route path="orders" element={<OrderPage />} />
+      </Route>
     </Routes>
+    
   );
 }
 
