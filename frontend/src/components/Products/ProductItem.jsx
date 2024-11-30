@@ -28,7 +28,6 @@ const ProductItem = ({ productItem }) => {
     <div className="product-item">
   <div className="product-image" onClick={goToDetails}>
     <img src={productItem.img[0]} alt={productItem.name} className="img1" />
-    <img src={productItem.img[1]} alt={productItem.name} className="img2" />
   </div>
   <div className="product-info">
     <h3 className="product-title" onClick={goToDetails}>
