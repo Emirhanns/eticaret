@@ -25,6 +25,11 @@ app.use(cors());
 
 app.use("/api", mainRoute);
 
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
+
 app.listen(port, () => {
   connect();
   console.log(`Sunucu ${port} portunda çalışıyor.`);
