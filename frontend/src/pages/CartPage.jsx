@@ -3,9 +3,6 @@ import { CartContext } from "../context/CartProvider";
 import { Spin, message, Select, Input, Table, Button, Modal } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import "./CartPage.css"; // CSS dosyasını düzenlemeyi unutmayın
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-
 
 const { Option } = Select;
 
@@ -71,14 +68,13 @@ const CartPage = () => {
         orderNumber, // Sipariş numarası ekleniyor
       };
 
-      const response = await fetch(`${API_BASE_URL}/api/orders`, { // Buradaki çift tırnak işareti düzeltilmeli
-      method: "POST",
-      headers: {
-      "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
+      const response = await fetch("http://localhost:5000/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
       });
-
 
       const data = await response.json();
       if (response.ok) {
@@ -178,13 +174,43 @@ const CartPage = () => {
         {/* Sol: Sepet Özeti */}
         <div className="cart-summary">
           <h2>Sepet Özeti</h2>
-          <Table
-            columns={columns.filter((column) => !column.hidden)} 
-            dataSource={cartItems}
-            pagination={false}
-            rowKey="_id"
-          />
+          <div className="cart-items">
+            {cartItems.map((item) => (
+              <div key={item._id} className="cart-item-card">
+                <img
+                  src={item.img[0]}
+                  alt={item.name}
+                  className="item-thumbnail"
+                />
+                <div className="item-details">
+                  <h3 className="item-name">{item.name}</h3>
+                  <p className="item-price">{item.price} TL</p>
+                  <div className="quantity-controls">
+                    <Button
+                      icon={<MinusOutlined />}
+                      onClick={() => handleQuantityChange(item._id, item.quantity - 1)}
+                    />
+                    <span className="quantity">{item.quantity}</span>
+                    <Button
+                      icon={<PlusOutlined />}
+                      onClick={() => handleQuantityChange(item._id, item.quantity + 1)}
+                    />
+                  </div>
+                  <Button
+                    type="danger"
+                    onClick={() => removeFromCart(item._id)}
+                  >
+                    Kaldır
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="cart-totals">
+            <p>Toplam: {cartTotals} TL</p>
+          </div>
         </div>
+
 
         {/* Sağ: Ödeme Formu */}
         <div className="payment-form">
@@ -265,6 +291,7 @@ const CartPage = () => {
       >
         <p>IBAN: TR00 0000 0000 0000 0000 0000</p>
         <p>Sipariş Numaranız: <strong>{orderNumber}</strong></p>
+        <p>Lütfen Açıklama Kısmına Sipariş Numaranızı Yazmayı Unutmayınız Aksi Halde Ürününüz Kargoya Verilmeyecektir</p>
       </Modal>
     </div>
   );
