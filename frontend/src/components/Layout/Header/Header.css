@@ -46,7 +46,6 @@ header {
   background-color: #fff;
   z-index: 2;
   transition: 0.5s ease all;
-
 }
 
 
@@ -236,26 +235,32 @@ header .menu-dropdown-content a:hover {
 @media (max-width: 650px) {
   .header-center {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; /* Genişliği azaltarak mobilde daha iyi görünmesini sağlayın */
+    top: 3%;
+    left: 35%;
+    width: 30%;
     background-color: #fff;
     z-index: 2;
-    padding: 10px; /* İçerik için biraz boşluk ekleyin */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyin */
-    border-radius: 8px; /* Köşeleri yuvarlayın */
     transition: 0.5s ease all;
   }
 
-  .header-center .search-input {
-    width: 100%; /* Arama kutusunun genişliği header'ı kapsasın */
-    margin: 0 auto; /* Ortalayın */
+  
+
+  .dropdown-item-image {
+    display: none;
+  }
+
+  .header-center .bi-x-circle {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
   }
 
   .header-center .menu-list {
-    flex-direction: column; /* Menü öğelerini dikey hizalayın */
-    padding: 20px 0; /* Yukarı ve aşağı boşluk ekleyin */
+    flex-direction: column;
+    padding: 50px 75px;
   }
 
   .header-mobile {
@@ -265,8 +270,15 @@ header .menu-dropdown-content a:hover {
   header .menu-dropdown-wrapper {
     display: none !important;
   }
-}
 
+  header .menu-list i {
+    display: none;
+  }
+
+  header .menu-list-item a {
+    font-size: 16px !important;
+  }
+}
 
 /* Header search input styles */
 .search-input {
@@ -364,4 +376,3 @@ header .menu-dropdown-content a:hover {
 .header-left .logo:hover img {
   transform: scale(1.1); /* Hover sırasında görseli büyüt */
 }
-
