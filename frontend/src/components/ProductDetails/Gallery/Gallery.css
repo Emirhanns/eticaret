@@ -1,72 +1,62 @@
-.single-product .product-gallery {
-    width: 50%;
-    padding-right: 15px;
-  }
-  
-  .single-product .single-image-wrapper {
-    overflow: hidden;
-    display: flex;
-  }
-  
-  .single-product .single-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform-origin: center;
-  }
-  
-  .single-product .single-image-wrapper img:hover {
-    cursor: zoom-in;
-  }
-  
-  .single-product .gallery-thumbs {
-    /*   display: flex;
-    column-gap: 10px; */
-  }
-  
-  .single-product .gallery-thumbs li {
-    cursor: pointer;
-    display: flex;
-  }
-  
-  .single-product .gallery-thumbs li img {
-    border: 1px solid transparent;
-  }
-  
-  .single-product .gallery-thumbs li img.active {
-    border-color: #000;
-  }
-  
-  .single-product .gallery-thumbs li img:hover {
-    border-color: #000;
-  }
-  
-  .single-product .product-thumb {
-    position: relative;
-    margin-top: 7px;
-  }
-  
-  .single-product .glide__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    font-size: 25px;
-  }
-  
-  .single-product .glide__arrow--left {
-    left: 0;
-  }
-  
-  .single-product .glide__arrow--right {
-    right: 0;
-  }
-  
+.product-gallery {
+  position: relative;
+  width: 100%;
+}
 
-  /* .gallery-thumbs{
-    display: flex;
-  }
+.single-image-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
 
-  .gallery-thumbs img{
-    width: 100px;
-  } */
+.single-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.glide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+}
+
+.glide__arrow--left {
+  left: 10px;
+}
+
+.glide__arrow--right {
+  right: 10px;
+}
+
+.product-thumb {
+  margin-top: 10px;
+}
+
+.thumb-wrapper {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.thumb {
+  max-width: 80px;
+  height: auto;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+.thumb.active {
+  border-color: #000;
+}
+
+.thumb:hover {
+  border-color: #666;
+}

@@ -66,9 +66,12 @@ const Gallery = ({ singleProduct }) => {
 
   return (
     <div className="product-gallery">
+      {/* Büyük Görsel */}
       <div className="single-image-wrapper">
-        <img src={activeImg.img} id="single-image" alt="" />
+        <img src={activeImg.img} id="single-image" alt="Product Preview" />
       </div>
+
+      {/* Küçük Resimler ve Oklar */}
       <div className="product-thumb">
         <Slider {...sliderSettings}>
           {singleProduct.img.map((itemImg, index) => (
