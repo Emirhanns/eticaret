@@ -381,7 +381,7 @@ header .menu-dropdown-content a:hover {
 /* Telefon ekranında ürün arama kısmını düzeltmek için stil */
 @media (max-width: 650px) {
   .header-center {
-    top: 50%; /* Üstten ortalama */
+    top: 10%; /* Üstten ortalama */
     left: 50%; /* Soldan ortalama */
     transform: translate(-50%, -50%); /* Gerçek ortalama için */
     width: 80%; /* Daha geniş bir alan */
