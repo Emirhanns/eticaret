@@ -5,17 +5,14 @@ const Footer = () => {
   return (
     <React.Fragment>
       <footer>
-        
-
         <section className="features-section">
           <h2>Enfes Tatlılar</h2>
           <div className="features-grid">
             <div className="feature-item">
               <img src="https://i.imgur.com/E4v27Zv.png" />
-              
               <h3>Günlük Taze Fırınlanmış</h3>
               <p> 
-              Ekmeğimiz günlük olarak taze olarak pişirilmekte olup hiçbir koruyucu madde içermemektedir ve kalitesi oldukça yüksektir. Aynı zamanda özellikle güzel ve yumuşaktır.
+                Ekmeğimiz günlük olarak taze olarak pişirilmekte olup hiçbir koruyucu madde içermemektedir ve kalitesi oldukça yüksektir. Aynı zamanda özellikle güzel ve yumuşaktır.
               </p>
             </div>
             
@@ -31,12 +28,11 @@ const Footer = () => {
               <img src="https://i.imgur.com/1TUxJ2t.png" />
               <h3>Lezzetli Tatlar</h3>
               <p>
-              Her biri özenle seçilmiş malzemelerle hazırlanan tatlı ve kurabiyelerimizle gününüze lezzet katın.
+                Her biri özenle seçilmiş malzemelerle hazırlanan tatlı ve kurabiyelerimizle gününüze lezzet katın.
               </p>
             </div>
           </div>
         </section>
-
       </footer>
     </React.Fragment>
   );

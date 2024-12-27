@@ -1,136 +1,48 @@
 /* Footer Styles */
 footer {
-  padding: 10px 0;  /* Yüksekliği azaltmak için padding'i küçültüyoruz */
+  padding: 15px 0;  /* Yüksekliği azaltmak için padding'i küçültüyoruz */
   text-align: center;
   background-color: #333;
   color: white;
 }
 
-footer .footer-logo {
-  margin-bottom: 10px;  /* Logo ile altındaki açıklama arasındaki mesafeyi kısaltıyoruz */
-}
-
-footer .footer-logo a {
-  font-size: 20px;  /* Logo font boyutunu küçültüyoruz */
-  font-weight: bold;
-}
-
-footer .footer-desc p {
-  font-size: 14px;  /* Açıklama yazı boyutunu küçültüyoruz */
-  line-height: 1.4;  /* Satır yüksekliğini kısaltıyoruz */
-  margin-bottom: 5px;  /* Alt boşluğu azaltıyoruz */
-}
-
-footer .footer-contact p {
-  font-size: 14px;  /* İletişim yazı boyutunu küçültüyoruz */
-}
-
-footer .footer-menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer .footer-menu-list li {
-  display: inline;
-  margin-right: 15px;  /* Menüyü sıkıştırıyoruz */
-}
-
-footer .footer-menu-list li a {
-  color: #fff;
-  font-size: 14px;  /* Menü linklerinin font boyutunu küçültüyoruz */
-}
-
-footer .footer-menu-list li a:hover {
-  text-decoration: underline;
-}
-
 /* Features Section */
 .features-section {
-  padding: 60px 20px;
+  padding: 30px 20px;  /* Padding'i azaltıyoruz */
   text-align: center;
   background-color: #6d4c41;
 }
 
 .features-section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 28px;  /* Başlık boyutunu küçültüyoruz */
+  margin-bottom: 30px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 20px;
   justify-items: center;
 }
 
 .feature-item {
   text-align: center;
-  max-width: 300px;
+  max-width: 280px;  /* Genişliği daraltıyoruz */
   color: wheat;
 }
 
 .feature-item img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 20px;
+  width: 40px;  /* İmg boyutunu küçültüyoruz */
+  height: 40px;
+  margin-bottom: 15px;  /* Alt boşluğu azaltıyoruz */
 }
 
 .feature-item h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
+  font-size: 20px;  /* Başlık boyutunu küçültüyoruz */
+  margin-bottom: 10px;  /* Alt boşluğu azaltıyoruz */
 }
 
 .feature-item p {
-  font-size: 16px;
+  font-size: 14px;  /* Metin boyutunu küçültüyoruz */
   color: whitesmoke;
-}
-
-/* Visit Us Section */
-.visit-us-section {
-  display: flex;
-  padding: 60px 20px;
-  background-color: #6d4c41;
-  justify-content: space-between;
-}
-
-.visit-content {
-  flex: 1;
-  padding-right: 20px;
-  color: whitesmoke;
-}
-
-.visit-content h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: whitesmoke;
-}
-
-.visit-content p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: whitesmoke;
-}
-
-.visit-content h3 {
-  font-size: 20px;
-  margin-top: 20px;
-  color: whitesmoke;
-}
-
-.visit-content .image-credit {
-  font-size: 14px;
-  color: #888;
-  margin-top: 20px;
-}
-
-.visit-image {
-  flex: 1;
-}
-
-.visit-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
