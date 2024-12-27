@@ -366,7 +366,7 @@ header .menu-dropdown-content a:hover {
 
 /* Logo görseli için stil */
 .header-left .logo img {
-  max-width: 80px; /* Maksimum genişlik */
+  max-width: 100px; /* Maksimum genişlik */
   height: auto; /* Oranları koruyarak yüksekliği ayarla */
   object-fit: contain; /* Görselin taşmasını önle */
   transition: transform 0.3s ease; /* Hover efekt için animasyon */
