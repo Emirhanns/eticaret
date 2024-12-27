@@ -243,9 +243,7 @@ header .menu-dropdown-content a:hover {
     transition: 0.5s ease all;
   }
 
-  .header-left .logo{
-    font-size: 10px;
-  }
+  
 
   .dropdown-item-image {
     display: none;
@@ -355,4 +353,26 @@ header .menu-dropdown-content a:hover {
 .dropdown-item span {
   font-size: 14px;
   color: #333;
+}
+
+
+/* Logo alanını özelleştirme */
+.header-left .logo {
+  display: flex; /* İçeriği hizalamak için */
+  align-items: center; /* Dikey merkezleme */
+  justify-content: center; /* Yatay merkezleme */
+  text-decoration: none; /* Bağlantı alt çizgisini kaldır */
+}
+
+/* Logo görseli için stil */
+.header-left .logo img {
+  max-width: 100px; /* Maksimum genişlik */
+  height: auto; /* Oranları koruyarak yüksekliği ayarla */
+  object-fit: contain; /* Görselin taşmasını önle */
+  transition: transform 0.3s ease; /* Hover efekt için animasyon */
+}
+
+/* Hover efekti */
+.header-left .logo:hover img {
+  transform: scale(1.1); /* Hover sırasında görseli büyüt */
 }
