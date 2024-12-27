@@ -37,12 +37,6 @@ const Footer = () => {
           </div>
         </section>
 
-        <section className="visit-us-section">
-         
-          <div className="visit-image">
-            <img src="https://cdn.yemek.com/uploads/2018/12/brownie-kurabiye-yemekcom.jpg" />
-          </div>
-        </section>
       </footer>
     </React.Fragment>
   );

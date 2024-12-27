@@ -34,7 +34,7 @@ const Header = ({ setIsSearchShow }) => {
       }
 
       const data = await res.json();
-      console.log("aaaaaaaaaaaaaaaaaa", data)
+      console.log(data)
       setSearchResults(data); // Arama sonuçlarını güncelle
     } catch (error) {
       console.log(error);
@@ -99,9 +99,9 @@ const Header = ({ setIsSearchShow }) => {
 
             <div className="header-right">
               <div className="header-right-links">
-                <Link to={"/auth"} className="header-account">
+                {/* <Link to={"/auth"} className="header-account">
                   <i className="bi bi-person"></i>
-                </Link>
+                </Link> */}
 
                 <div className="header-cart">
                   <Link to={"/cart"} className="header-cart-link">
