@@ -107,3 +107,43 @@
     right: 10px;
   }
   
+
+  .product-gallery {
+    width: 100%;
+    margin: auto;
+  }
+  
+  .single-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px; /* Genişliği sınırlayabilirsiniz */
+    margin: auto;
+  }
+  
+  .image-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .glide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+  }
+  
+  .glide__arrow--left {
+    left: 10px;
+  }
+  
+  .glide__arrow--right {
+    right: 10px;
+  }
+  
