@@ -13,10 +13,7 @@ footer {
   background-color: #6d4c41;
 }
 
-.features-section h2 {
-  font-size: 28px;  /* Başlık boyutunu küçültüyoruz */
-  margin-bottom: 30px;
-}
+
 
 .features-grid {
   display: grid;

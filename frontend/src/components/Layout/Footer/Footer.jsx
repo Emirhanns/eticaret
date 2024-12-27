@@ -6,7 +6,6 @@ const Footer = () => {
     <React.Fragment>
       <footer>
         <section className="features-section">
-          <h2>Enfes Tatlılar</h2>
           <div className="features-grid">
             <div className="feature-item">
               <img src="https://i.imgur.com/E4v27Zv.png" />
