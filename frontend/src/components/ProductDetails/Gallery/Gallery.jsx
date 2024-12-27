@@ -51,9 +51,7 @@ const Gallery = ({ singleProduct }) => {
 
   const sliderSettings = {
     dots: false,
-    infinite: true, // Sonsuz kaydırma
-    autoplay: true, // Otomatik kaydırma
-    autoplaySpeed: 3000, // 3 saniye aralıklarla kaydırma
+    infinite: true, // Sonsuz döngü burada aktif
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextBtn />,
@@ -70,9 +68,23 @@ const Gallery = ({ singleProduct }) => {
     <div className="product-gallery">
       {/* Ana Görsel ve Oklar */}
       <div className="single-image-wrapper">
-        <PrevBtn onClick={() => setActiveImg({ img: singleProduct.img[activeImg.imgIndex - 1 < 0 ? 0 : activeImg.imgIndex - 1], imgIndex: activeImg.imgIndex - 1 < 0 ? 0 : activeImg.imgIndex - 1 })} />
+        <PrevBtn
+          onClick={() => {
+            setActiveImg({
+              img: singleProduct.img[activeImg.imgIndex === 0 ? singleProduct.img.length - 1 : activeImg.imgIndex - 1],
+              imgIndex: activeImg.imgIndex === 0 ? singleProduct.img.length - 1 : activeImg.imgIndex - 1,
+            });
+          }}
+        />
         <img src={activeImg.img} id="single-image" alt="Product Preview" />
-        <NextBtn onClick={() => setActiveImg({ img: singleProduct.img[activeImg.imgIndex + 1 >= singleProduct.img.length ? singleProduct.img.length - 1 : activeImg.imgIndex + 1], imgIndex: activeImg.imgIndex + 1 >= singleProduct.img.length ? singleProduct.img.length - 1 : activeImg.imgIndex + 1 })} />
+        <NextBtn
+          onClick={() => {
+            setActiveImg({
+              img: singleProduct.img[activeImg.imgIndex === singleProduct.img.length - 1 ? 0 : activeImg.imgIndex + 1],
+              imgIndex: activeImg.imgIndex === singleProduct.img.length - 1 ? 0 : activeImg.imgIndex + 1,
+            });
+          }}
+        />
       </div>
 
       {/* Küçük Resimler */}
