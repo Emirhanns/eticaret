@@ -20,8 +20,8 @@
   }
   
   .single-product .gallery-thumbs {
-      display: flex;
-    column-gap: 10px;
+    /*   display: flex;
+    column-gap: 10px; */
   }
   
   .single-product .gallery-thumbs li {
@@ -70,80 +70,3 @@
   .gallery-thumbs img{
     width: 100px;
   } */
-
-  .single-product .product-gallery {
-    width: 50%;
-    padding-right: 15px;
-  }
-  
-  .single-product .single-image-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-  }
-  
-  .single-product .single-image-wrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .single-product .glide__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  .single-product .glide__arrow--left {
-    left: 10px;
-  }
-  
-  .single-product .glide__arrow--right {
-    right: 10px;
-  }
-  
-
-  .product-gallery {
-    width: 100%;
-    margin: auto;
-  }
-  
-  .single-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 600px; /* Genişliği sınırlayabilirsiniz */
-    margin: auto;
-  }
-  
-  .image-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .glide__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 2;
-    padding: 10px;
-  }
-  
-  .glide__arrow--left {
-    left: 10px;
-  }
-  
-  .glide__arrow--right {
-    right: 10px;
-  }
-  

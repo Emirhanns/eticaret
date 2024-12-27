@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "./Gallery.css";
+import { useEffect } from "react";
 
 function PrevBtn({ onClick }) {
   return (
     <button
       className="glide__arrow glide__arrow--left"
+      data-glide-dir="<"
       onClick={onClick}
       style={{
         zIndex: "2",
@@ -21,6 +23,7 @@ function NextBtn({ onClick }) {
   return (
     <button
       className="glide__arrow glide__arrow--right"
+      data-glide-dir=">"
       onClick={onClick}
       style={{
         zIndex: "2",
@@ -46,34 +49,54 @@ const Gallery = ({ singleProduct }) => {
   });
 
   useEffect(() => {
-    if (singleProduct.img && singleProduct.img.length > 0) {
-      setActiveImg({ img: singleProduct.img[0], imgIndex: 0 });
-    }
+    setActiveImg({ img: singleProduct.img[0], imgIndex: 0 });
   }, [singleProduct.img]);
 
-  const sliderSettings = {
-    dots: true,
-    infinite: singleProduct.img.length > 1, // Tek görsel varsa sonsuz kaydırmayı devre dışı bırak
-    slidesToShow: 1, // Aynı anda sadece bir görsel göstermek için
-    slidesToScroll: 1,
-    nextArrow: singleProduct.img.length > 1 ? <NextBtn /> : null, // Tek görsel varsa butonları gizle
-    prevArrow: singleProduct.img.length > 1 ? <PrevBtn /> : null,
-  };
+const sliderSettings = {
+  dots: false,
+  infinite: singleProduct.img.length > 1, // Tek görsel varsa sonsuz kaydırmayı devre dışı bırak
+  slidesToShow: singleProduct.img.length > 1 ? Math.min(singleProduct.img.length, 4) : 1, // Görsel sayısına göre ayar
+  slidesToScroll: 1,
+  nextArrow: singleProduct.img.length > 1 ? <NextBtn /> : null, // Tek görsel varsa butonları gizle
+  prevArrow: singleProduct.img.length > 1 ? <PrevBtn /> : null,
+};
+
+console.log(singleProduct.img);
+
 
   return (
     <div className="product-gallery">
       <div className="single-image-wrapper">
-        <Slider {...sliderSettings}>
-          {singleProduct.img.map((itemImg, index) => (
-            <div key={index} className="image-slide">
-              <img
-                src={itemImg}
-                alt={`Product ${index}`}
-                className="img-fluid"
-              />
-            </div>
-          ))}
-        </Slider>
+        <img src={`${activeImg.img}`} id="single-image" alt="" />
+      </div>
+      <div className="product-thumb">
+        <div className="glide__track" data-glide-el="track">
+          <ol className="gallery-thumbs glide__slides">
+            <Slider {...sliderSettings}>
+              {singleProduct.img.map((itemImg, index) => (
+                <li
+                  className="glide__slide glide__slide--active"
+                  key={index}
+                  onClick={() =>
+                    setActiveImg({
+                      img: itemImg,
+                      imgIndex: index,
+                    })
+                  }
+                >
+                  <img
+                    src={`${itemImg}`}
+                    alt=""
+                    className={`img-fluid ${
+                      activeImg.imgIndex === index ? "active" : ""
+                    } `}
+                  />
+                </li>
+              ))}
+            </Slider>
+          </ol>
+        </div>
+        <div className="glide__arrows" data-glide-el="controls"></div>
       </div>
     </div>
   );
@@ -82,7 +105,5 @@ const Gallery = ({ singleProduct }) => {
 export default Gallery;
 
 Gallery.propTypes = {
-  singleProduct: PropTypes.shape({
-    img: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }).isRequired,
+  singleProduct: PropTypes.object,
 };
