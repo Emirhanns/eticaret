@@ -46,6 +46,7 @@ header {
   background-color: #fff;
   z-index: 2;
   transition: 0.5s ease all;
+
 }
 
 
@@ -236,7 +237,7 @@ header .menu-dropdown-content a:hover {
   .header-center {
     position: fixed;
     top: 3%;
-    left: 15%;
+    left: 20%;
     width: 30%;
     background-color: #fff;
     z-index: 2;
