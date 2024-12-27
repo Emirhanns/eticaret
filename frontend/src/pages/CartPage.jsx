@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../context/CartProvider";
 import { Spin, message, Select, Input, Table, Button, Modal } from "antd";
-import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
+import { PlusOutlined, MinusOutlined, WhatsAppOutlined } from "@ant-design/icons";
 import "./CartPage.css"; // CSS dosyasını düzenlemeyi unutmayın
 
 const { Option } = Select;
@@ -93,69 +93,6 @@ const CartPage = () => {
     }
   };
 
-  const columns = [
-    {
-      title: "Ürün",
-      dataIndex: "thumbnail",
-      render: (_, record) => (
-        <img
-          src={record.img[0]}
-          alt={record.name}
-          style={{ width: "100px", height: "auto" }}
-        />
-      ),
-      // Ekran genişliği 768px'den küçükse gizleyelim
-      hidden: screenWidth < 768,
-    },
-    {
-      title: "Adı",
-      dataIndex: "name",
-      render: (_, record) => record.name,
-    },
-    {
-      title: "Fiyat",
-      dataIndex: "price",
-      render: (_, record) => `${record.price} TL`,
-    },
-    {
-      title: "Ara Toplam",
-      dataIndex: "subtotal",
-      render: (_, record) =>
-        `${(record.price * record.quantity).toFixed(2)} TL`,
-    },
-    {
-      title: "Adet",
-      dataIndex: "quantity",
-      render: (_, record) => (
-        <span className="quantity-display">{record.quantity}</span>
-      ),
-    },
-    {
-      title: "İşlem",
-      dataIndex: "action",
-      render: (_, record) => (
-        <div>
-          <Button
-            type="danger"
-            className="remove-button"
-            onClick={() => removeFromCart(record._id)}
-          >
-            Kaldır
-          </Button>
-
-          <PlusOutlined
-            className="plus"
-            onClick={() => handleQuantityChange(record._id, record.quantity + 1)}
-          />
-          <MinusOutlined
-            className="minus"
-            onClick={() => handleQuantityChange(record._id, record.quantity - 1)}
-          />
-        </div>
-      ),
-    },
-  ];
-
   useEffect(() => {
     // Ekran boyutunu güncellemek için event listener ekliyoruz
     const handleResize = () => {
@@ -211,7 +148,6 @@ const CartPage = () => {
           </div>
         </div>
 
-
         {/* Sağ: Ödeme Formu */}
         <div className="payment-form">
           <h2>Ödeme Sayfası</h2>
@@ -258,8 +194,6 @@ const CartPage = () => {
               style={{ width: "100%" }}
             >
               <Option value="IBAN">IBAN ile Ödeme</Option>
-              <Option value="Kapıda Ödeme">Kapıda Ödeme</Option>
-              <Option value="Kredi Kartı">Kredi Kartı</Option>
             </Select>
           </div>
           <Spin spinning={loading}>
@@ -267,10 +201,20 @@ const CartPage = () => {
               className="payment-button"
               type="primary"
               onClick={handlePaymentSubmit}
+              style={{ marginBottom: "10px" }}
             >
               Ödeme Yap
             </Button>
           </Spin>
+          {/* WhatsApp Butonu */}
+          <Button
+            type="default"
+            icon={<WhatsAppOutlined />}
+            onClick={() => window.open("https://wa.me/5069513956", "_blank")}
+            style={{ backgroundColor: "#25D366", color: "white" }}
+          >
+            WhatsApp ile İletişime Geç
+          </Button>
         </div>
       </div>
 
