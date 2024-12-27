@@ -66,12 +66,14 @@ const Gallery = ({ singleProduct }) => {
 
   return (
     <div className="product-gallery">
-      {/* Büyük Görsel */}
+      {/* Ana Görsel ve Oklar */}
       <div className="single-image-wrapper">
+        <PrevBtn onClick={() => setActiveImg({ img: singleProduct.img[activeImg.imgIndex - 1 < 0 ? 0 : activeImg.imgIndex - 1], imgIndex: activeImg.imgIndex - 1 < 0 ? 0 : activeImg.imgIndex - 1 })} />
         <img src={activeImg.img} id="single-image" alt="Product Preview" />
+        <NextBtn onClick={() => setActiveImg({ img: singleProduct.img[activeImg.imgIndex + 1 >= singleProduct.img.length ? singleProduct.img.length - 1 : activeImg.imgIndex + 1], imgIndex: activeImg.imgIndex + 1 >= singleProduct.img.length ? singleProduct.img.length - 1 : activeImg.imgIndex + 1 })} />
       </div>
 
-      {/* Küçük Resimler ve Oklar */}
+      {/* Küçük Resimler */}
       <div className="product-thumb">
         <Slider {...sliderSettings}>
           {singleProduct.img.map((itemImg, index) => (
