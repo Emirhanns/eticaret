@@ -236,32 +236,26 @@ header .menu-dropdown-content a:hover {
 @media (max-width: 650px) {
   .header-center {
     position: fixed;
-    top: 3%;
-    left: 20%;
-    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Genişliği azaltarak mobilde daha iyi görünmesini sağlayın */
     background-color: #fff;
     z-index: 2;
+    padding: 10px; /* İçerik için biraz boşluk ekleyin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyin */
+    border-radius: 8px; /* Köşeleri yuvarlayın */
     transition: 0.5s ease all;
   }
 
-  
-
-  .dropdown-item-image {
-    display: none;
-  }
-
-  .header-center .bi-x-circle {
-    display: inline-block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
+  .header-center .search-input {
+    width: 100%; /* Arama kutusunun genişliği header'ı kapsasın */
+    margin: 0 auto; /* Ortalayın */
   }
 
   .header-center .menu-list {
-    flex-direction: column;
-    padding: 50px 75px;
+    flex-direction: column; /* Menü öğelerini dikey hizalayın */
+    padding: 20px 0; /* Yukarı ve aşağı boşluk ekleyin */
   }
 
   .header-mobile {
@@ -271,15 +265,8 @@ header .menu-dropdown-content a:hover {
   header .menu-dropdown-wrapper {
     display: none !important;
   }
-
-  header .menu-list i {
-    display: none;
-  }
-
-  header .menu-list-item a {
-    font-size: 16px !important;
-  }
 }
+
 
 /* Header search input styles */
 .search-input {
@@ -378,29 +365,3 @@ header .menu-dropdown-content a:hover {
   transform: scale(1.1); /* Hover sırasında görseli büyüt */
 }
 
-/* Telefon ekranında ürün arama kısmını düzeltmek için stil */
-@media (max-width: 650px) {
-  .header-center {
-    top: 10%; /* Üstten ortalama */
-    left: 50%; /* Soldan ortalama */
-    transform: translate(-50%, -50%); /* Gerçek ortalama için */
-    width: 80%; /* Daha geniş bir alan */
-    background-color: #fff;
-    z-index: 2;
-    padding: 10px; /* İçerik boşluğu */
-    border-radius: 8px; /* Köşeleri yuvarlama */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-  }
-
-  .header-center .menu-list {
-    flex-direction: column;
-    align-items: center; /* Yatayda ortalama */
-    padding: 20px 0; /* Daha fazla iç boşluk */
-  }
-
-  .header-center .search-input {
-    margin-top: 10px; /* Arama kutusu yukarıdan boşluk */
-    margin-bottom: 10px; /* Arama kutusu aşağıdan boşluk */
-    width: 100%; /* Tam genişlik */
-  }
-}
