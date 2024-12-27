@@ -1,45 +1,48 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* Footer Styles */
 footer {
-  background-color: #f8f8f8;
-  color: #333;
-}
-
-/* Hero Section */
-.hero-section {
-  position: relative;
+  padding: 10px 0;  /* Yüksekliği azaltmak için padding'i küçültüyoruz */
   text-align: center;
-  padding: 40px 20px;
-  background-color: #6d4c41;
+  background-color: #333;
   color: white;
 }
 
-.hero-overlay {
-  position: relative;
-  z-index: 1;
+footer .footer-logo {
+  margin-bottom: 10px;  /* Logo ile altındaki açıklama arasındaki mesafeyi kısaltıyoruz */
 }
 
-.hero-section h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
+footer .footer-logo a {
+  font-size: 20px;  /* Logo font boyutunu küçültüyoruz */
+  font-weight: bold;
 }
 
-.hero-section p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 30px;
+footer .footer-desc p {
+  font-size: 14px;  /* Açıklama yazı boyutunu küçültüyoruz */
+  line-height: 1.4;  /* Satır yüksekliğini kısaltıyoruz */
+  margin-bottom: 5px;  /* Alt boşluğu azaltıyoruz */
 }
 
-.hero-section img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 20px;
+footer .footer-contact p {
+  font-size: 14px;  /* İletişim yazı boyutunu küçültüyoruz */
+}
+
+footer .footer-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-menu-list li {
+  display: inline;
+  margin-right: 15px;  /* Menüyü sıkıştırıyoruz */
+}
+
+footer .footer-menu-list li a {
+  color: #fff;
+  font-size: 14px;  /* Menü linklerinin font boyutunu küçültüyoruz */
+}
+
+footer .footer-menu-list li a:hover {
+  text-decoration: underline;
 }
 
 /* Features Section */
@@ -113,7 +116,6 @@ footer {
   font-size: 20px;
   margin-top: 20px;
   color: whitesmoke;
-
 }
 
 .visit-content .image-credit {
@@ -131,60 +133,4 @@ footer {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer Styles */
-footer {
-  padding: 20px 0;
-  text-align: center;
-  background-color: #333;
-  color: white;
-}
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .footer-logo {
-  margin-bottom: 20px;
-}
-
-footer .footer-logo a {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-footer .footer-desc p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-footer .footer-contact p {
-  font-size: 16px;
-}
-
-footer .footer-menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer .footer-menu-list li {
-  display: inline;
-  margin-right: 20px;
-}
-
-footer .footer-menu-list li a {
-  color: #fff;
-  font-size: 16px;
-}
-
-footer .footer-menu-list li a:hover {
-  text-decoration: underline;
 }
