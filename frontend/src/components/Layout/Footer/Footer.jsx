@@ -5,13 +5,7 @@ const Footer = () => {
   return (
     <React.Fragment>
       <footer>
-        <div className="hero-section">
-          <div className="hero-overlay">
-            <h1>Lezzetli Anlar, Tatlı Fırsatlar!</h1>
-            
-            <img src="https://i.imgur.com/07DOBp9.jpg" />
-          </div>
-        </div>
+        
 
         <section className="features-section">
           <h2>Enfes Tatlılar</h2>
@@ -44,17 +38,7 @@ const Footer = () => {
         </section>
 
         <section className="visit-us-section">
-          <div className="visit-content">
-            <h2>Bizi Ziyaret Edin</h2>
-            <p>Adres<br />Edirne / Merkez</p>
-            <h3>Hours</h3>
-            <p>
-             Pazartesi - Cuma <br />
-              9.00 – 17.00<br /><br />
-            </p>
-            <h3>Telefon</h3>
-            <p>0053215648451</p>
-          </div>
+         
           <div className="visit-image">
             <img src="https://cdn.yemek.com/uploads/2018/12/brownie-kurabiye-yemekcom.jpg" />
           </div>

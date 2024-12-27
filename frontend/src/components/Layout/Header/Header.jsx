@@ -51,9 +51,10 @@ const Header = ({ setIsSearchShow }) => {
           <div className="header-wrapper">
             <div className="header-left">
               <Link to={"/"} className="logo">
-                LOGO
+                <img src="img/logom.png" alt="Logo" />
               </Link>
             </div>
+
 
             <div className="header-center">
               {/* Arama Inputu */}
