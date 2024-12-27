@@ -151,6 +151,14 @@ const CartPage = () => {
         {/* Sağ: Ödeme Formu */}
         <div className="payment-form">
           <h2>Ödeme Sayfası</h2>
+          <Button
+            type="default"
+            icon={<WhatsAppOutlined />}
+            onClick={() => window.open("https://wa.me/5069513956", "_blank")}
+            style={{ backgroundColor: "#25D366", color: "white" }}
+          >
+            WhatsApp ile İletişime Geç veya Sipariş Ver
+          </Button>
           <div>
             <label>Ad:</label>
             <Input
@@ -207,14 +215,7 @@ const CartPage = () => {
             </Button>
           </Spin>
           {/* WhatsApp Butonu */}
-          <Button
-            type="default"
-            icon={<WhatsAppOutlined />}
-            onClick={() => window.open("https://wa.me/5069513956", "_blank")}
-            style={{ backgroundColor: "#25D366", color: "white" }}
-          >
-            WhatsApp ile İletişime Geç
-          </Button>
+          
         </div>
       </div>
 
