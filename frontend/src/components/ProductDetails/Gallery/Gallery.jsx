@@ -51,11 +51,13 @@ const Gallery = ({ singleProduct }) => {
 
   const sliderSettings = {
     dots: false,
-    infinite: singleProduct.img.length > 1,
+    infinite: true, // Sonsuz kaydırma
+    autoplay: true, // Otomatik kaydırma
+    autoplaySpeed: 3000, // 3 saniye aralıklarla kaydırma
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: singleProduct.img.length > 1 ? <NextBtn /> : null,
-    prevArrow: singleProduct.img.length > 1 ? <PrevBtn /> : null,
+    nextArrow: <NextBtn />,
+    prevArrow: <PrevBtn />,
     afterChange: (current) => {
       setActiveImg({
         img: singleProduct.img[current],
@@ -81,9 +83,7 @@ const Gallery = ({ singleProduct }) => {
               <img
                 src={itemImg}
                 alt={`Product Thumbnail ${index}`}
-                className={`thumb ${
-                  activeImg.imgIndex === index ? "active" : ""
-                }`}
+                className={`thumb ${activeImg.imgIndex === index ? "active" : ""}`}
                 onClick={() =>
                   setActiveImg({
                     img: itemImg,
