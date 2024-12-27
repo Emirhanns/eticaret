@@ -51,7 +51,7 @@ const Header = ({ setIsSearchShow }) => {
           <div className="header-wrapper">
             <div className="header-left">
               <Link to={"/"} className="logo">
-                <img src="img/logom.png" alt="Logo" />
+                <img src="/img/logom.png" alt="Logo" />
               </Link>
             </div>
 
